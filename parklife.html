@@ -188,13 +188,48 @@
 								<br/>
 								Additionally, the <b>site</b> variable contains some site-wide parameters such as:
 								<ul>
-									<li>base_url</li>
-									<li>author</li>
-									<li>email</li>
-									<li>title</li>
-									<li>subtitle</li>		
+									<li>base_url: Base location where the lifestream is located</li>
+									<li>author: Name of the owner of the stream</li>
+									<li>email: Email address of the owner of the stream. Optional, only used in Atom feeds.</li>
+									<li>title: Name of the stream/blog</li>
+									<li>subtitle: Subtitle/taglife of the stream/blog</li>		
+								</ul><br/>
+								The values of these parameters are used in several places throughout the pages.
+							</p>
+							<p>
+								Once the default settings have been configured, the application is ready to be 
+								deployed to the Google App Engine via the App Engine launcher application. You must at
+								least set one administrator user in the Google App Engine dashboard, as this is the user
+								that will have access to configure the settings and manage entries.
+							</p>
+							<p>
+								Now that the application has been deployed, please proceed to <b>http://your-app-id.appspot.com/admin/settings</b>. If
+								you had not logged in yet, Google will ask you to authenticate. Upon authentication, you will be greeted by
+								a basic screen where you will introduce the some basic parameters required for each one of the sources.
+							</p>
+							<p>
+								When these settings have been configured, we can run of the scheduled jobs manually to give the stream
+								some initial content, please proceed to the following URLs:
+								<ul>
+									<li>http://your-app-id.appspot.com/tasks/update/twitter</li>
+									<li>http://your-app-id.appspot.com/tasks/update/youtube</li>
+									<li>http://your-app-id.appspot.com/tasks/update/delicious</li>
+									<li>http://your-app-id.appspot.com/tasks/update/googlereader</li>
 								</ul>
-							</p> 
+							</p>
+							<p>
+								In order to pot new blog entries, the URL is http://your-app-id.appspot.com/admin/blog.
+							</p>
+							<h1 class="section-title">Customizing Parklife</h1>
+							<p>
+								The look of parklife is mainly customizable via CSS. Please dive into file public/css/styles.css and feel free
+								to play around with the styles.
+							</p>
+							<p>
+								Additionally, it is possible to customize Parklife's template if you're familiar with
+								Python and the Django template system. Parklife templates are located in
+								app/templates/
+							</p>
 					</div>
 				</div>
 			</div><br class="fix" />
