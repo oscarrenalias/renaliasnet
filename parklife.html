@@ -91,9 +91,110 @@
 						<div id="content">
 							<h1 class="section-title">Parklife</h1>
 							<p>
-								Content coming soon
+								Parklife is  a Python-based <a href="http://en.wikipedia.org/wiki/Lifestreaming">lifestreaming</a> application that runs on the Google
+								App Engine. As of the most recent version, Parklife is able to pull data from the following
+								social networks/applications:<br/>
+								<ul>
+									<li>Twitter</li>
+									<li>YouTube</li>
+									<li>Delicious.com</li>
+									<li>Google Reader</li>
+								</ul>
 							</p>
-						</div>
+							<p>
+								Additionally, Parklife has basic support for blogging, and blog entries are
+								seamlessly integrated into the life stream.
+							</p>
+							<p>
+								There are no official releases of Parklife; the most recent version is always available
+								from its github repository at <a href="http://github.com/phunkphorce/parklife">http://github.com/phunkphorce/parklife</a>.
+							</p>
+							<h1 class="section-title">Features</h1>
+							<p>
+							Parklife has the following features:
+							<ul>
+								<li>Support from pulling data from Twitter, YouTube, Delicious.com and Google Reader</li>
+								<li>Python-based, only runs on the Google App Engine</li>
+								<li>Basic blog features, blog entries can be posted, updated and edited</li>
+								<li>The layout is based on the Django template engine, easy to customize</li>
+								<li>Support for geolocated entries, with location data displayed via Google Maps</li>
+							</ul>
+							</p>
+							<h1 class="section-title">License</h1>
+							<p>
+								License to be defined
+							</p>
+							<h1 class="section-title">Twitter integration</h1>
+							The following features are supported by the Twitter integration:
+							<ul>
+								<li>Daily tweets are automatically incorporated into the lifestream</li>
+								<li>Hash tags are automatically extracted and incorporated as Parklife tags</li>
+								<li>Twitpic.com images are extracted and displayed as images</li>
+								<li>Geolocation infromation from tweets is extracted and processed</li>
+							</ul>
+							<h1 class="section-title">Google Reader integration</h1>
+							<p>
+								The Google Reader integration is based on the feed of shared items. Entry titles,
+								URLs, descriptions and tags are automatically incorporated into the life stream. Please note 
+								that tags are currently ignored.
+							</p>
+							<h1 class="section-title">YouTube integration</h1>
+							<p>
+								Videos from the shared and uploaded feed are imported into the lifestream, along with
+								their description, tags and geolocation data.
+							</p>
+							<h1 class="section-title">Delicious integration</h1>
+							<p>
+								Links, descriptions and tags are automatically imported into the lifestream from
+								delicious.com. 
+							</p>
+							<h1 class="section-title">Installation</h1>
+							<p>Installation requirements:<br/>
+								<ul>
+									<li>A copy of the source code, fetched either via git or some other mean</li>
+									<li>An account in Google App Engine, please apply via <a href="http://www.appspot.com">http://www.appspot.com</a></li>
+									<li>The Google App Engine SDK installed in your workstation, you can obtain
+										it from <a href="http://code.google.com/appengine/downloads.html">here</a>
+										(any of the operating systems supported by GAE will do)
+									</li>
+								</ul>
+							</p>
+							<p>
+								Import the Parklife code into the GAE SDK, via option "Add Existing application..."
+								in the "File" menu in the Google App Engine launcher. You can set the 
+								application ID to anything you like, as long as it's unique within the Google
+								App Engine platform (the App Engine launcher will warn you during the deployment
+								if the application ID is not unique)
+							</p>
+							<p>
+								Once the application has been imported, and before deployment, you must customize
+								file <b>defaults.py</b> file, as it contains important configuration parameters:
+								<ul>
+									<li>YOUTUBE_API_KEY: A YouTube API key is necessary in order to be able
+										to pull data from YouTube feeds. If you don't have one, you must
+										apply for one</li>
+									<li>GOOGLE_API_KEY: The search capabilities in Parklife are implemented via
+										a Google custom search engine. Therefore, you must also apply for a 
+										Google API key</li>
+									<li>GOOGLE_MAPS_API_KEY: The geolocation features in Parklife are built upon
+										Google Maps, for which you will also need a valid API key</li>
+									<li>GOOGLE_CUSTOM_SEARCH_ENGINE_KEY: This is the key identifying your custom
+										search engine, and it can be obtained from your custom search engine's
+										control panel</li>
+									<li>DISQUS_USER: Comments in Parklife are handled by Disqus.com. If you plan
+										to turn commenting on in your stream, you must register first with Disqus and
+										then provide your username here</li>
+								</ul>
+								<br/>
+								Additionally, the <b>site</b> variable contains some site-wide parameters such as:
+								<ul>
+									<li>base_url</li>
+									<li>author</li>
+									<li>email</li>
+									<li>title</li>
+									<li>subtitle</li>		
+								</ul>
+							</p> 
 					</div>
 				</div>
 			</div><br class="fix" />
