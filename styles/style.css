@@ -1,5 +1,5 @@
 body {
-	background: #242426 none repeat scroll 0 0;
+	background-color: #242426;
 	color: #CFCFCF;
 	font-family: Arial;
 	font-size: 13px;
@@ -507,5 +507,18 @@ div#breadcrumb {
 }
 
 #dsq-content .dsq-dc-logo {
-display:none;
+	display:none;
+}
+
+.pic-thumb {
+	background: #242426 url('../js/jquery/css/back.png') no-repeat center center;
+	border: 0px;	
+}
+
+#picasa a:link, #picasa a:visited {
+	border-bottom: 0px;
+}
+
+#picasa a:hover {
+	background-color: #242426;
 }
