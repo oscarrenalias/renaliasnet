@@ -522,3 +522,40 @@ div#breadcrumb {
 #picasa a:hover {
 	background-color: #242426;
 }
+
+.widget {
+	/*border: 1px solid red;*/
+}
+
+.widget-title {
+	font-family:Arial,Helvetica,Sans-Serif;
+	font-size:15px;
+	font-weight:bold;
+	margin: 15px 0 15px 0;
+	text-transform:uppercase;
+	padding-left: 20px;	
+}
+
+.rss-widget-title {
+	background: #242426 url('http://stream.renalias.net/images/googlereader.png') no-repeat top left;
+}
+
+.twitter-widget-title {
+	background: #242426 url('http://stream.renalias.net/images/twitter.png') no-repeat top left;
+}
+
+.delicious-widget-title {
+	background: #242426 url('http://stream.renalias.net/images/delicious.png') no-repeat top left;
+}
+
+.youtube-widget-title {
+	background: #242426 url('http://stream.renalias.net/images/youtube.png') no-repeat top left;
+}
+
+.blog-widget-title {
+	background: #242426 url('http://stream.renalias.net/images/blog.png') no-repeat top left;
+}
+
+.youtube-widget-title {
+	background: #242426 url('http://stream.renalias.net/images/youtube.png') no-repeat top left;
+}

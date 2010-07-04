@@ -7,9 +7,13 @@
 			Oscar Renalias | Home
 		</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<script type="text/javascript" src="http://stream.renalias.net/js/jquery/jquery-1.4.2.js"></script>
+		<script type="text/javascript" src="http://stream.renalias.net/js/jquery/jquery.timeago.js"></script>
+		<script type="text/javascript" src="http://stream.renalias.net/js/parklife/core.js"></script>
+		<script type="text/javascript" src="http://stream.renalias.net/js/parklife/widgets.js"></script>
 		<link href="styles/style.css" media="screen" rel="stylesheet" type="text/css" />
 		<script type="text/javascript">
-//<![CDATA[
+		//<![CDATA[
 
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-795450-2']);
@@ -22,6 +26,15 @@
 		})();
 
 		//]]>
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				parklife.widgets.latestPost();
+				parklife.widgets.latestTweet();
+				parklife.widgets.latestArticle();
+				parklife.widgets.latestLink();
+				parklife.widgets.latestVideo();
+			});
 		</script>
 	</head>
 	<body>
@@ -86,6 +99,7 @@
 				<div id="left-column-wrapper">
 					<div id="full-column">
 						<div id="content">
+							<h1 class="section-title">Welcome</h1>
 							<p>
 								Feel free to browse through my blog, lifestream, personal projects or pictures using
 								the nagivation bar above.
@@ -96,6 +110,31 @@
 								<a href="files/oscar_renalias_cv_public.pdf">Oscar Renalias' CV</a>
 							</p>
 						</div>
+						<div id="latest-blog-post" style="display:none" class="widget">
+							<h1 class="widget-title blog-widget-title">Latest blog post</h1>
+							<div id="latest-blog-post-content"></div>
+							<div><br/><a href="http://stream.renalias.net/source/blog">More...</a></div>
+						</div>
+						<div id="latest-tweet" style="display:none" class="widget">
+							<h1 class="widget-title twitter-widget-title">Latest Tweet</h1>
+							<div id="latest-tweet-content"></div>
+							<div><br/><a href="http://twitter.com/phunkphorce">More...</a></div>
+						</div>
+						<div id="latest-rss" style="display:none" class="widget">
+							<h1 class="widget-title rss-widget-title">Latest Article</h1>
+							<div id="latest-rss-content"></div>
+							<div><br/><a href="http://stream.renalias.net/source/googlereader">More...</a></div>
+						</div>						
+						<div id="latest-delicious" style="display:none" class="widget">
+							<h1 class="widget-title delicious-widget-title">Latest Link</h1>
+							<div id="latest-delicious-content"></div>
+							<div><br/><a href="http://stream.renalias.net/source/delicious">More...</a></div>
+						</div>						
+						<div id="latest-youtube" style="display:none" class="widget">
+							<h1 class="widget-title youtube-widget-title">Latest Video</h1>
+							<div id="latest-youtube-content"></div>
+							<div><br/><a href="http://stream.renalias.net/source/youtube">More...</a></div>
+						</div>						
 					</div>
 				</div>
 			</div><br class="fix" />
